@@ -9,7 +9,7 @@ import { updateDate } from '../../utils';
 import { LineChart } from 'react-chartkick';
 import 'chart.js';
 
-const RadioContainer = styled.div`
+const InputContainer = styled.div`
     display: flex;
     justify-content: space-around;
     margin: 1rem 0;
@@ -36,17 +36,16 @@ function Weight({ appData }) {
                 value={currentDate}
                 onChange={setCurrentDate}
             />
-            <RadioContainer>
+            <InputContainer>
                 <ClickyGem onClick={() => setIncrement(0.2)} size="50px" reverse={increment === 0.2}>0.2</ClickyGem>
                 <ClickyGem onClick={() => setIncrement(0.4)} size="50px" reverse={increment === 0.4}>0.4</ClickyGem>
                 <ClickyGem onClick={() => setIncrement(1)} size="50px" reverse={increment === 1}>1.0</ClickyGem>
-            </RadioContainer>
-            <div>
-                <button onClick={() => setWeight(-increment)}>DOWN</button>
+            </InputContainer>
+            <InputContainer>
+                <ClickyGem onClick={() => setWeight(-increment)} color="#cf234b" activeColor="#d36eff" size="50px" />
                     {((trackerValues[dateKey] && trackerValues[dateKey]['weight']) || defaultWeight).toFixed(1) }
-                <button onClick={() => setWeight(increment)}>UP</button>
-            </div>
-
+                <ClickyGem onClick={() => setWeight(increment)} color="#23cf45" activeColor="#dbf536" size="50px" />
+            </InputContainer>
             <LineChart
                 min={180}
                 data={

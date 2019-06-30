@@ -86,7 +86,9 @@ export default function App() {
 
     console.log(trackerValues);
     return (
-        <Router>
+        <Router
+            baseName={process.env.NODE_ENV === 'production' ? '/life-tracker' : '/'}
+        >
             <AppDataContext.Provider
                 value={{
                     isAuthed,
