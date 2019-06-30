@@ -9,11 +9,12 @@ import 'react-calendar-heatmap/dist/styles.css';
 import { withAppData } from '../../AppData';
 import { H1, H2, ClickyGem } from '../../common/components';
 import { getWeekOf, updateDate } from '../../utils';
+import ReactTooltip from 'react-tooltip';
 
 const baseSquareColor = new Color('#f5cccc');
 
 const DrinkContainer = styled.div`
-    .react-calendar-heatmap .color-empty { fill: ${baseSquareColor.hex()} }
+    .react-calendar-heatmap .color-empty { fill: ${baseSquareColor.lighten(0.05).hex()} }
     .react-calendar-heatmap .color-scale-0 { fill: ${baseSquareColor.hex()} }
     .react-calendar-heatmap .color-scale-1 { fill: ${baseSquareColor.darken(0.2).hex()} }
     .react-calendar-heatmap .color-scale-2 { fill: ${baseSquareColor.darken(0.4).hex()} }
@@ -84,6 +85,11 @@ function Drinks({ appData }) {
                             count: trackerValues[trackerKey].drinks,
                         }))
                 }
+                tooltipDataAttrs={value => {
+                    return value.date
+                        ? { 'data-tip': `${value.date}: ${value.count} drink(s)` }
+                        : { 'data-tip': 'No data for this date' };
+                }}
                 classForValue={(value) => {
                     if (!value) {
                         return 'color-empty';
@@ -93,6 +99,7 @@ function Drinks({ appData }) {
                     return `color-scale-${classValue}`;
                 }}
             />
+            <ReactTooltip />
         </DrinkContainer>
     );
 }

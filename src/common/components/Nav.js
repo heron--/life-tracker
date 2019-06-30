@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ const NavItems = styled.ul`
 
 const StyledListItem = styled.li`
     display: inline-block;
+    font-style: ${props => props.activeRoute ? 'italic' : 'normal'}
 `;
 
 const StyledLink = styled(Link)`
@@ -22,8 +24,12 @@ function Nav(props) {
             <NavItems>
                 {
                     props.routes.map(route => (
-                        <StyledListItem key={route.path}>
-                            <StyledLink to={route.path}>{route.display}</StyledLink>
+                        <StyledListItem key={route.path} activeRoute={route.path === props.location.pathname}>
+                            <StyledLink
+                                to={route.path}
+                            >
+                                {route.display}
+                            </StyledLink>
                         </StyledListItem>
                     ))
                 }
@@ -32,4 +38,4 @@ function Nav(props) {
     );
 }
 
-export default Nav;
+export default withRouter(Nav);

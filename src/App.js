@@ -5,8 +5,9 @@ import * as firebase from "firebase/app";
 import "firebase/database";
 import styled from 'styled-components';
 import Login from './pages/Login'
-import Drinks from './pages/Drinks'
 import Dashboard from './pages/Dashboard'
+import Drinks from './pages/Drinks'
+import Weight from './pages/Weight'
 import { appBackground } from './common/colors';
 import { ProtectedRoute, Nav } from './common/components';
 import { AppDataContext } from './AppData';
@@ -31,19 +32,25 @@ const AppContainer = styled.div`
     width: 100%;
 `;
 
-const ROUTE_DRINKS = {
-    path: '/drinks',
-    display: 'Drinks',
-};
-
 const ROUTE_DASHBOARD = {
     path: '/dashboard',
     display: 'Dashboard',
 };
 
+const ROUTE_DRINKS = {
+    path: '/drinks',
+    display: 'Drinks',
+};
+
+const ROUTE_WEIGHT = {
+    path: '/weight',
+    display: 'Weight',
+};
+
 const NAV_ROUTES = [
     ROUTE_DASHBOARD,
     ROUTE_DRINKS,
+    ROUTE_WEIGHT,
 ];
 
 export default function App() {
@@ -52,6 +59,10 @@ export default function App() {
     const [trackerValues, setTrackerValues] = useState({});
 
     useEffect(() => {
+        function dataCallback(data) {
+            setTrackerValues(data.val());
+        }
+
         const firebaseConfig = {
             apiKey: "AIzaSyCqkGjaPgMGjQ8lWHb4U9MHANgp5FONbaU",
             authDomain: "life-tracker-a6834.firebaseapp.com",
@@ -65,10 +76,6 @@ export default function App() {
         setIsDbConnected(true);
 
         updateDate(firebase, '20190630', trackerValues, { drinks: 0 });
-
-        function dataCallback(data) {
-            setTrackerValues(data.val());
-        }
 
         firebase.database().ref('/').on('value', dataCallback);
 
@@ -94,6 +101,7 @@ export default function App() {
                         <Route exact path="/" component={Login} />
                         <ProtectedRoute isAuthed={isAuthed} path={ROUTE_DRINKS.path} component={Drinks} />
                         <ProtectedRoute isAuthed={isAuthed} path={ROUTE_DASHBOARD.path} component={Dashboard} />
+                        <ProtectedRoute isAuthed={isAuthed} path={ROUTE_WEIGHT.path} component={Weight} />
                     </AppContainer>
                 </Body>
             </AppDataContext.Provider>

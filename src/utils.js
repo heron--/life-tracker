@@ -2,7 +2,6 @@ import moment from 'moment';
 
 const DEFAULT_TRACKER_VALUE = {
     drinks: 0,
-    weight: null,
     exercise: false,
     exerciseNotes: '',
 };
