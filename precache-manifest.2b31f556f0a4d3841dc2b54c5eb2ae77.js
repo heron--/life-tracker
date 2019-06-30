@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ffdfe5e03485706f6a53a978f40d182e",
+    "revision": "5d239484aa1d9dc054e29e9012f84e2c",
     "url": "/life-tracker/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/life-tracker/static/css/2.58969a89.chunk.css"
   },
   {
-    "revision": "6a68430d1b475abc9ee4",
+    "revision": "c8ac3ac0750d6322070d",
     "url": "/life-tracker/static/css/main.3946a8a5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/life-tracker/static/js/2.6e6884c8.chunk.js"
   },
   {
-    "revision": "6a68430d1b475abc9ee4",
-    "url": "/life-tracker/static/js/main.99469793.chunk.js"
+    "revision": "c8ac3ac0750d6322070d",
+    "url": "/life-tracker/static/js/main.df8a4710.chunk.js"
   },
   {
     "revision": "54ed01d21a51233a864b",
