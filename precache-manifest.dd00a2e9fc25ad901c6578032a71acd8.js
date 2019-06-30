@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "54a08b401d49bb58b96aa3a5554a7939",
+    "revision": "3d1d63624092f08a2554b26184d4b96e",
     "url": "/life-tracker/index.html"
   },
   {
-    "revision": "881f4a1ceb57cc897276",
+    "revision": "6b106c58d0e34b0f67f6",
     "url": "/life-tracker/static/css/2.58969a89.chunk.css"
   },
   {
-    "revision": "50f9b4a5902fe02c07b5",
+    "revision": "3a1c04a569f10082291b",
     "url": "/life-tracker/static/css/main.3946a8a5.chunk.css"
   },
   {
-    "revision": "881f4a1ceb57cc897276",
-    "url": "/life-tracker/static/js/2.b11447a7.chunk.js"
+    "revision": "6b106c58d0e34b0f67f6",
+    "url": "/life-tracker/static/js/2.6e6884c8.chunk.js"
   },
   {
-    "revision": "50f9b4a5902fe02c07b5",
-    "url": "/life-tracker/static/js/main.7a6d604d.chunk.js"
+    "revision": "3a1c04a569f10082291b",
+    "url": "/life-tracker/static/js/main.439395bd.chunk.js"
   },
   {
     "revision": "54ed01d21a51233a864b",
