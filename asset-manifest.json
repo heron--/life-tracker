@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/life-tracker/static/css/main.3946a8a5.chunk.css",
-    "main.js": "/life-tracker/static/js/main.439395bd.chunk.js",
-    "main.js.map": "/life-tracker/static/js/main.439395bd.chunk.js.map",
+    "main.js": "/life-tracker/static/js/main.99469793.chunk.js",
+    "main.js.map": "/life-tracker/static/js/main.99469793.chunk.js.map",
     "runtime~main.js": "/life-tracker/static/js/runtime~main.3f36a2d9.js",
     "runtime~main.js.map": "/life-tracker/static/js/runtime~main.3f36a2d9.js.map",
     "static/css/2.58969a89.chunk.css": "/life-tracker/static/css/2.58969a89.chunk.css",
     "static/js/2.6e6884c8.chunk.js": "/life-tracker/static/js/2.6e6884c8.chunk.js",
     "static/js/2.6e6884c8.chunk.js.map": "/life-tracker/static/js/2.6e6884c8.chunk.js.map",
     "index.html": "/life-tracker/index.html",
-    "precache-manifest.dd00a2e9fc25ad901c6578032a71acd8.js": "/life-tracker/precache-manifest.dd00a2e9fc25ad901c6578032a71acd8.js",
+    "precache-manifest.679091ce82f98bca1aac023914c341a8.js": "/life-tracker/precache-manifest.679091ce82f98bca1aac023914c341a8.js",
     "service-worker.js": "/life-tracker/service-worker.js",
     "static/css/2.58969a89.chunk.css.map": "/life-tracker/static/css/2.58969a89.chunk.css.map",
     "static/css/main.3946a8a5.chunk.css.map": "/life-tracker/static/css/main.3946a8a5.chunk.css.map"
