@@ -7,7 +7,7 @@
     "chart.js": "^2.8.0",
     "color": "^3.1.2",
     "firebase": "^6.2.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-calendar-heatmap": "^1.8.0",
